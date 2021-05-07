@@ -11,7 +11,7 @@ class Navigation extends Component {
     return (
       <StyledDive>
         <div className="container">
-          <Navbar collapseOnSelect expand="lg" className="p-3" variant="dark">
+          <Navbar collapseOnSelect expand="lg" className="p-4" variant="dark">
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="mr-auto">
@@ -28,8 +28,9 @@ class Navigation extends Component {
                   </NavDropdown.Item>
                 </NavDropdown>
                 <Nav.Link href="#wwhome">Pasirašyti sutartį</Nav.Link>
+                <Nav.Link href="#hdome">Skaičiuoklė</Nav.Link>
                 <Nav.Link href="#qhome">Apie mus</Nav.Link>
-                <Nav.Link href="#hdome">Kontaktai</Nav.Link>{" "}
+                <Nav.Link href="#hdome">Kontaktai</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>

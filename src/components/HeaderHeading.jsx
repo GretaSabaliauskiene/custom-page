@@ -4,7 +4,7 @@ const HeaderHeading = styled.h3`
   font-family: "Roboto Slab", serif !important;
   font-weight: bold !important;
   color: #28282c;
-  font-size: 1rem;
+  font-size: 1.4rem;
   display: block;
 `;
 
