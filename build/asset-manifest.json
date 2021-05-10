@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0fd3542b.chunk.css",
+    "main.js": "/static/js/main.cc66435d.chunk.js",
+    "main.js.map": "/static/js/main.cc66435d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.bb15957e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.bb15957e.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.74851fce.chunk.js": "/static/js/2.74851fce.chunk.js",
+    "static/js/2.74851fce.chunk.js.map": "/static/js/2.74851fce.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/static/css/2.4c97ca4f.chunk.css.map",
+    "static/css/main.0fd3542b.chunk.css.map": "/static/css/main.0fd3542b.chunk.css.map",
+    "static/js/2.74851fce.chunk.js.LICENSE.txt": "/static/js/2.74851fce.chunk.js.LICENSE.txt",
+    "static/media/cogwheel.e1fd6f7e.svg": "/static/media/cogwheel.e1fd6f7e.svg",
+    "static/media/e-mail.2ca41643.svg": "/static/media/e-mail.2ca41643.svg",
+    "static/media/location.9698afbe.svg": "/static/media/location.9698afbe.svg",
+    "static/media/medal.b789f3c0.svg": "/static/media/medal.b789f3c0.svg",
+    "static/media/muitines-tarpininkas.551a71ca.jpg": "/static/media/muitines-tarpininkas.551a71ca.jpg",
+    "static/media/phone.316b5b3b.svg": "/static/media/phone.316b5b3b.svg",
+    "static/media/scientist.f0897505.svg": "/static/media/scientist.f0897505.svg",
+    "static/media/wh.fe39a2b3.svg": "/static/media/wh.fe39a2b3.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bb15957e.js",
+    "static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.74851fce.chunk.js",
+    "static/css/main.0fd3542b.chunk.css",
+    "static/js/main.cc66435d.chunk.js"
+  ]
+}
