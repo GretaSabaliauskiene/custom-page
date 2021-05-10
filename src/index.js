@@ -5,6 +5,7 @@ import Navigation from "./components/navigation";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Benefits from "./components/Benefits";
+import Footer from "./components/Footer";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -12,6 +13,7 @@ ReactDOM.render(
     <Navigation />
     <Hero />
     <Benefits />
+    <Footer />
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -11,6 +11,11 @@ const BepefitsDiv = styled.div`
   background: ${COLORS.benefit};
 `;
 
+const BenefitsCol = styled.div`
+  @media screen and (max-width: 990px) {
+    padding-bottom: 2rem;
+  }
+`;
 const BenefitsH2 = styled.h2`
   font-size: 3.8rem;
   font-weight: 800;
@@ -21,6 +26,10 @@ const BenefitsH2 = styled.h2`
 const BenefitsH3 = styled.h3`
   font-size: 3.2rem;
   font-weight: 800;
+  @media screen and (max-width: 1199px) {
+    font-size: 2.3rem;
+    padding: 1rem;
+  }
 `;
 
 class Benefits extends Component {
@@ -30,7 +39,7 @@ class Benefits extends Component {
         <div className="container">
           <BenefitsH2>Kodėl verta rinktis „Granito“ tarpininkus?</BenefitsH2>
           <div className="row p-5">
-            <div className="col d-flex align-items-start">
+            <div className="col-lg-4 col-md-12 d-flex align-items-start">
               <img className="mr-4" src={medal} alt="" />
               <BenefitsCol>
                 <BenefitsH3>Ilgametė patirtis</BenefitsH3>
@@ -41,7 +50,7 @@ class Benefits extends Component {
                 </p>
               </BenefitsCol>
             </div>
-            <div className="col d-flex align-items-start">
+            <div className="col-lg-4 col-md-12 d-flex align-items-start">
               <img className="mr-4" src={professional} alt="" />
               <BenefitsCol>
                 <BenefitsH3>Profesionalumas</BenefitsH3>
@@ -52,7 +61,7 @@ class Benefits extends Component {
                 </p>
               </BenefitsCol>
             </div>
-            <div className="col d-flex align-items-start">
+            <div className="col-lg-4 col-md-12 d-flex align-items-start">
               <img className="mr-4" src={cogwheel} alt="" />
               <BenefitsCol>
                 <BenefitsH3>Patikimumas</BenefitsH3>
