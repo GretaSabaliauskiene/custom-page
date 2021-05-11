@@ -1,19 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
 import "./index.css";
-import Navigation from "./components/navigation";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Benefits from "./components/Benefits";
-import Footer from "./components/Footer";
+import App from "./App";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Header />
-    <Navigation />
-    <Hero />
-    <Benefits />
-    <Footer />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -20,17 +20,19 @@ class Navigation extends Component {
                   title="Teikiamos paslaugos"
                   id="basic-nav-dropdown"
                 >
-                  <NavDropdown.Item href="#action/3.1">
+                  <NavDropdown.Item href="/muitines-tarpininkas">
                     Muitinės tarpininkas
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">
+                  <NavDropdown.Item href="/intrastato-ataskaitos">
                     Intrastato ataskaitos
                   </NavDropdown.Item>
                 </NavDropdown>
-                <Nav.Link href="#wwhome">Pasirašyti sutartį</Nav.Link>
-                <Nav.Link href="#hdome">Skaičiuoklė</Nav.Link>
-                <Nav.Link href="#qhome">Apie mus</Nav.Link>
-                <Nav.Link href="#hdome">Kontaktai</Nav.Link>
+                <Nav.Link href="/pasirasyti-sutarti">
+                  Pasirašyti sutartį
+                </Nav.Link>
+                <Nav.Link href="/skaiciuokle">Skaičiuoklė</Nav.Link>
+                <Nav.Link href="/apie-mus">Apie mus</Nav.Link>
+                <Nav.Link href="/susisiekite-kontaktai">Kontaktai</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>

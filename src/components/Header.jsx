@@ -5,7 +5,14 @@ import phone from "../images/svg/phone.svg";
 import location from "../images/svg/location.svg";
 import watch from "../images/svg/wh.svg";
 import InfoCol from "../components/Info";
+import styled from "styled-components";
 import HeaderHeading from "../components/HeaderHeading";
+
+const HeaderLogo = styled.div`
+  @media screen and (max-width: 990px) {
+    margin-bottom: 2rem;
+  }
+`;
 
 class Header extends Component {
   render() {
@@ -13,9 +20,9 @@ class Header extends Component {
       <header>
         <div className="container header-info">
           <div className="row ">
-            <div className="col-lg-4 col-md-12">
+            <HeaderLogo className="col-lg-4 col-md-12">
               <img src={logo} alt="" />
-            </div>
+            </HeaderLogo>
             <div className="col d-flex header-info__contacts justify-content-between">
               <div className="d-flex align-items-center ">
                 <a href="tel:+37037363398">
