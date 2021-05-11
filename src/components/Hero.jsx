@@ -41,7 +41,9 @@ class Hero extends Component {
 
             <div class="animate__animated animate__fadeInLeft">
               {" "}
-              <Button>Tarpininkavimo paslaugos &gt;</Button>
+              <Button href="/muitines-tarpininkas">
+                Tarpininkavimo paslaugos &gt;
+              </Button>
             </div>
           </HeroContainer>
         </div>

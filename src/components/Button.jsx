@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import COLORS from "../components/Colors";
 
-const Button = styled.button`
+const Button = styled.a`
   padding: 18px 30px;
   background: ${COLORS.primary};
   color: white;
@@ -9,6 +9,7 @@ const Button = styled.button`
   font-size: 1.6rem;
   font-weight: 500;
   border: none;
+  text-decoration: none;
   &:hover {
     background: white;
     color: black;

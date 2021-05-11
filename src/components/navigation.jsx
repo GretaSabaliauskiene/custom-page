@@ -15,7 +15,7 @@ class Navigation extends Component {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="mr-auto">
-                <Nav.Link href="#home">Pagrindinis puslapis</Nav.Link>
+                <Nav.Link href="/">Pagrindinis puslapis</Nav.Link>
                 <NavDropdown
                   title="Teikiamos paslaugos"
                   id="basic-nav-dropdown"
