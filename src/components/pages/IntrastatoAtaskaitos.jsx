@@ -79,7 +79,9 @@ class IntrastatoAtaskaitos extends Component {
           <div className="container">
             <div className="row">
               <div className="col text-center">
-                <ArtickleH2>Intrastato ataskaitų pildymas</ArtickleH2>
+                <ArtickleH2>
+                  Intrastato ataskaitos - tiksliai ir laiku
+                </ArtickleH2>
               </div>
             </div>
             <div className="row">

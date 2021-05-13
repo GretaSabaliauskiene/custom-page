@@ -28,6 +28,7 @@ class Header extends Component {
                 <a href="tel:+37037363398">
                   <img src={phone} alt="" />
                 </a>
+
                 <InfoCol>
                   <HeaderHeading>+370 37 363398</HeaderHeading>
                   <span>info@tarpininkai.eu</span>

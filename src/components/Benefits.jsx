@@ -22,10 +22,12 @@ const BenefitsH2 = styled.h2`
   margin-bottom: 5rem;
   padding-top: 3rem;
   text-align: center;
+  color: ${COLORS.text};
 `;
 const BenefitsH3 = styled.h3`
   font-size: 3.2rem;
   font-weight: 800;
+  color: ${COLORS.text};
   @media screen and (max-width: 1199px) {
     font-size: 2.3rem;
     padding: 1rem;

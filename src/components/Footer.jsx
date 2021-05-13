@@ -8,9 +8,6 @@ import location from "../images/svg/location.svg";
 import styled from "styled-components";
 import watch from "../images/svg/wh.svg";
 
-console.log(phone);
-console.log(email);
-
 const FooterHeading = styled.h3`
   font-family: "Roboto Slab", serif !important;
   font-weight: bold !important;

@@ -4,6 +4,7 @@ const COLORS = {
   benefit: "#f3f4f6",
   muted: "rgb(135,135,141)",
   mutedArtickle: "#f3f4f6",
+  text: "#28282c",
 };
 
 export default COLORS;
