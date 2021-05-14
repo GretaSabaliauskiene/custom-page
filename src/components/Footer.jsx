@@ -7,13 +7,7 @@ import phone from "../images/svg/phone.svg";
 import location from "../images/svg/location.svg";
 import styled from "styled-components";
 import watch from "../images/svg/wh.svg";
-
-const FooterHeading = styled.h3`
-  font-family: "Roboto Slab", serif !important;
-  font-weight: bold !important;
-  color: white;
-  font-size: 1.8rem;
-`;
+import SmallHeading from "../components/SmallHeading";
 
 const FooterSpan = styled.span`
   color: ${COLORS.muted};
@@ -50,11 +44,11 @@ class Footer extends Component {
                 <img src={phone} alt="" />
               </FooterAnchor>
               <div>
-                <FooterHeading>
+                <SmallHeading>
                   <FooterAnchor href="tel:+37037363398">
                     +37037363398
                   </FooterAnchor>
-                </FooterHeading>
+                </SmallHeading>
                 <FooterSpan> Iškilo klausimų? Skambinkite!</FooterSpan>
               </div>
             </FooterSection>
@@ -63,11 +57,11 @@ class Footer extends Component {
                 <img src={email} alt="" />
               </FooterAnchor>
               <div>
-                <FooterHeading>
+                <SmallHeading>
                   <FooterAnchor href="mailto:info@tarpininkai.eu">
                     info@tarpininkai.eu
                   </FooterAnchor>
-                </FooterHeading>
+                </SmallHeading>
                 <FooterSpan>info@tarpininkai.eu</FooterSpan>
               </div>
             </FooterSection>
@@ -80,14 +74,14 @@ class Footer extends Component {
                 <img src={location} alt="" />
               </a>
               <div>
-                <FooterHeading>
+                <SmallHeading>
                   <FooterAnchor
                     href="https://goo.gl/maps/FgDntTBKz2zTFn3LA"
                     target="_blank"
                   >
                     Raudondvario pl. 150, 212 kab.
                   </FooterAnchor>
-                </FooterHeading>
+                </SmallHeading>
                 <FooterSpan> Kaunas, Lietuva</FooterSpan>
               </div>
             </FooterSection>
@@ -97,7 +91,7 @@ class Footer extends Component {
                 <img src={watch} alt="" />
               </a>
               <div>
-                <FooterHeading> 9:00 - 18:00</FooterHeading>
+                <SmallHeading> 9:00 - 18:00</SmallHeading>
                 <FooterSpan>
                   Pirmadienis - Penktadienis. Savaigaliais ir švenčių dienomis -
                   pagal išankstinį susitarimą.

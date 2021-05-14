@@ -74,6 +74,85 @@ a.nav-link:hover {
   padding: 3rem;
 }
 
+#calculator_form {
+  font-size: 1.6rem;
+  color: 555;
+}
+
+label.error {
+  font-weight: 300;
+  color: red;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.info-popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.info-popup__text {
+  visibility: hidden;
+  font-size: 1.5rem;
+  width: 47rem;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 10px 6px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.info-popup .info-popup__text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 19%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.show .bi-info-circle {
+  fill: #009c79;
+  transition: 0.5s;
+}
+
+.show .info-popup__text {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .info-popup__text {
+    left: -30px;
+    font-size: 1.5rem;
+    width: 30rem;
+  }
+  .info-popup .info-popup__text::after {
+    top: 100%;
+    left: 32%;
+  }
+}
+
 @media screen and (max-width: 990px) {
   .header-info {
     padding: 1rem;
