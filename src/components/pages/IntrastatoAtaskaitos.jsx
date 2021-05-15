@@ -7,6 +7,7 @@ import ArtickleH2 from "../ArtickleH2";
 import IntrastatoAtaskaitosImage from "../../images/intrastato-ataskaitos-300x200.png";
 import ArtickleImage from "../ArtickleImage";
 import WhiteArtickle from "../WhiteArtickle";
+import PricePageLink from "../PricePageLink";
 
 class IntrastatoAtaskaitos extends Component {
   render() {
@@ -98,8 +99,9 @@ class IntrastatoAtaskaitos extends Component {
               <p className="mb-5">
                 Susidomėjote mūsų teikiamomis Intrastat ataskaitų ruošimo,
                 pildymo ir pateikimo paslaugomis, tačiau norėtumėte sužinoti
-                daugiau informacijos apie mūsų paslaugų kainas? Skambinkite mums
-                telefonu 8 (37) 363398.
+                daugiau informacijos apie mūsų paslaugų
+                <PricePageLink href="./kainos"> kainas</PricePageLink>?
+                Skambinkite mums telefonu 8 (37) 363398.
               </p>
             </div>
           </div>

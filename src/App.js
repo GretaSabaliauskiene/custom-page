@@ -9,6 +9,7 @@ import HomePage from "./components/pages/HomePage";
 import PasirasytiSutarti from "./components/pages/PasirasytiSutarti";
 import Skaiciuokle from "./components/pages/Skaiciuokle";
 import SusisiekiteKontaktai from "./components/pages/SusisiekiteKontaktai";
+import Kainos from "./components/pages/Kainos";
 
 import { Route } from "react-router-dom";
 
@@ -24,6 +25,8 @@ function App() {
       <Route path="/apie-mus" component={ApieMus} />
       <Route path="/susisiekite-kontaktai" component={SusisiekiteKontaktai} />
       <Route path="/skaiciuokle" component={Skaiciuokle} />
+      <Route path="/kainos" component={Kainos} />
+
       <Footer />
     </div>
   );

@@ -3,11 +3,26 @@ import ArtickleH2 from "../ArtickleH2";
 import CalculatorForm from "./CalculatorForm";
 import CalculatorInput from "../calculator/CalculatorInput";
 import CalculatorButton from "./CalculatorButton";
-import SmallHeading from "../SmallHeading";
+import Joi from "joi-browser";
 import CalculatorResultsHeading from "./CalculatorResultsHeading";
 import CalculatorResultsNumber from "./CalculatorResultsNumber";
+import Input from "./Input";
+import InfoPopup from "./InfoPopup";
 
 class Calculator extends Component {
+  schema = {
+    productPrice: Joi.number().required(),
+  };
+
+  validate = () => {
+    // Joi.validate(this.state.inputs, this.schema);
+    const errors = {};
+
+    if (this.state.inputs.productPrice.trim() === "")
+      errors.productPrice = "iveskite";
+    return Object.keys(errors).length === 0 ? null : errors;
+  };
+
   state = {
     inputs: {
       productPrice: "",
@@ -26,6 +41,14 @@ class Calculator extends Component {
       pvmPagrindas: "",
       muituApmokestinamojiVerte: "",
     },
+    errors: {
+      productPrice: "Įveskite prekės   kainą",
+      // transferPriceBeforeEU: "Įveskite atgabenimo iki EU sienos kainą ",
+      // customsProcent: "Įveskite muito normą",
+      // transferPriceInEU:
+      //   "Įveskite atgabenimo nuo EU sienos iki išmuitinimo vietos kainą",
+      // otherCosts: "",
+    },
   };
 
   componentDidMount() {
@@ -42,6 +65,14 @@ class Calculator extends Component {
   };
 
   handleSubmit = (e) => {
+    e.preventDefault();
+
+    const errors = this.validate();
+    console.log(errors);
+    this.setState({ errors });
+
+    if (errors) return;
+
     const hiddenCalculations = { ...this.state.hiddenCalculations };
 
     const outPuts = { ...this.state.outPuts };
@@ -78,8 +109,6 @@ class Calculator extends Component {
     this.setState({ outPuts });
 
     this.setState({ hiddenCalculations });
-
-    e.preventDefault();
   };
 
   render() {
@@ -94,69 +123,29 @@ class Calculator extends Component {
               </div>
             </div>
             <CalculatorForm onSubmit={this.handleSubmit}>
-              <div className="form-group mt-4 pt-4">
-                <label className="mb-2" htmlFor="product_price text-dark ">
-                  Prekės kaina *{" "}
-                </label>
-                <CalculatorInput
-                  autoFocus
-                  value={inputs.productPrice}
-                  onChange={this.handleChange}
-                  id="product_price"
-                  name="productPrice"
-                  className="form-control input-lg"
-                  type="number"
-                  minLength="1"
-                  maxLength="10"
-                  required
-                ></CalculatorInput>
-              </div>
+              <Input
+                name="productPrice"
+                value={inputs.productPrice}
+                label="Prekės kaina*"
+                onChange={this.handleChange}
+              />
+              <Input
+                name="transferPriceBeforeEU"
+                value={inputs.transferPriceBeforeEU}
+                label="Atgabenimo iki ES sienos kaina *"
+                onChange={this.handleChange}
+              />
 
-              <div className="form-group mt-4 pb-4">
-                <label className="mb-2" htmlFor="transfer_price_before_eu ">
-                  Atgabenimo iki ES sienos kaina *
-                </label>
-                <CalculatorInput
-                  value={inputs.transferPriceBeforeEU}
-                  name="transferPriceBeforeEU"
-                  onChange={this.handleChange}
-                  id="transfer_price_before_eu"
-                  className="form-control"
-                  type="number"
-                  minLength="1"
-                  maxLength="10"
-                  required
-                ></CalculatorInput>
-              </div>
-
-              <div className="form-group pb-4">
-                <label className="mb-2" htmlFor="customs_procent">
+              <div className="form-group pt-4">
+                <label className="mb-2" htmlFor="customsProcent">
                   Muito norma (procentais) *
                 </label>
-                <div className="info-popup ml-3" id="info-popup">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="25"
-                    height="25"
-                    fill="gray"
-                    className="bi bi-info-circle"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
-                  </svg>
-                  <span className="info-popup__text">
-                    Nežinote muito normos? Skambinkite:
-                    <a style={{ color: "#4fa1dc" }} href="tel:+37061124074">
-                      +37061124074
-                    </a>
-                  </span>
-                </div>
+                <InfoPopup />
                 <CalculatorInput
                   name="customsProcent"
                   onChange={this.handleChange}
                   value={inputs.customsProcent}
-                  id="customs_procent"
+                  id="customsProcent"
                   type="number"
                   className="form-control"
                   minLength="1"
@@ -164,38 +153,20 @@ class Calculator extends Component {
                   required
                 ></CalculatorInput>
               </div>
-              <div className="form-group pb-4">
-                <label className="mb-2" htmlFor="transfer_price_in_eu">
-                  Atgabenimo nuo ES sienos iki išmuitinimo vietos kaina *
-                </label>
-                <CalculatorInput
-                  value={inputs.transferPriceInEU}
-                  onChange={this.handleChange}
-                  name="transferPriceInEU"
-                  id="transfer_price_in_eu"
-                  type="number"
-                  className="form-control"
-                  minLength="1"
-                  maxLength="10"
-                  required
-                ></CalculatorInput>
-              </div>
-              <div className="form-group pb-5">
-                <label className="mb-2" htmlFor="other_costs">
-                  Kitos išlaidos iki išmuitinimo (pvz.: muitinės tarpininko,
-                  sandėliavimo, prekių patikros ir pan.)
-                </label>
-                <CalculatorInput
-                  value={inputs.otherCosts}
-                  name="otherCosts"
-                  id="other_costs"
-                  onChange={this.handleChange}
-                  className="form-control"
-                  type="number"
-                  minLength="1"
-                  maxLength="10"
-                ></CalculatorInput>
-              </div>
+              <Input
+                name="transferPriceInEU"
+                value={inputs.transferPriceInEU}
+                label="Atgabenimo nuo ES sienos iki išmuitinimo vietos kaina *"
+                onChange={this.handleChange}
+              />
+              <Input
+                name="otherCosts"
+                value={inputs.otherCosts}
+                label="Kitos išlaidos iki išmuitinimo (pvz.: muitinės tarpininko,
+                  sandėliavimo, prekių patikros ir pan.)"
+                onChange={this.handleChange}
+              />
+
               <div className="row mt-5 justify-content-center">
                 <CalculatorButton
                   className="btn btn-dark w-50"

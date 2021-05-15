@@ -8,6 +8,7 @@ import ArtickleH2 from "../ArtickleH2";
 import MuitinesTarpininkasImage from "../../images/muitines-tarpininkas-300x200.png";
 import ArtickleImage from "../ArtickleImage";
 import TirCarnetImage from "../../images/tir-carnet-300x200.png";
+import PricePageLink from "../PricePageLink";
 
 class MuitinesTarpininkas extends Component {
   state = {};
@@ -137,7 +138,8 @@ class MuitinesTarpininkas extends Component {
             <p className="mb-5">
               Susidomėjote mūsų teikiamomis muitinės tarpininko paslaugomis,
               tačiau norėtumėte sužinoti daugiau informacijos apie mūsų paslaugų
-              kainas? Skambinkite mums telefonu 8 (37) 363398
+              <PricePageLink href="./kainos"> kainas</PricePageLink>?
+              Skambinkite mums telefonu 8 (37) 363398
             </p>
           </div>
         </WhiteArtickle>

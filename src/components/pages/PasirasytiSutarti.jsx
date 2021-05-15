@@ -7,11 +7,13 @@ class PasirasytiSutarti extends Component {
   state = {};
   render() {
     return (
-      <PageTitleBackground>
-        <AccentBackground>
-          <PageTitleHeading>Pasirašyti sutartį</PageTitleHeading>
-        </AccentBackground>
-      </PageTitleBackground>
+      <React.Fragment>
+        <PageTitleBackground>
+          <AccentBackground>
+            <PageTitleHeading>Pasirašyti sutartį</PageTitleHeading>
+          </AccentBackground>
+        </PageTitleBackground>
+      </React.Fragment>
     );
   }
 }
