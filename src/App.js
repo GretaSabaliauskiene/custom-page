@@ -41,11 +41,13 @@ function App() {
         Paspaudę mygtuką „Sutinku“ arba naršydami toliau patvirtinsite savo
         sutikimą. Bet kada galėsite atšaukti savo sutikimą pakeisdami interneto
         naršyklės nustatymus ir ištrindami įrašytus slapukus.
-        <span style={{ fontSize: "10px" }}>
-          <a href="/privatumo-politika" className="btn btn-info">
-            Privatumo politika
-          </a>
-        </span>
+        <a
+          style={{ textDecoration: "none", color: "white" }}
+          className="ml-3"
+          href="/privatumo-politika"
+        >
+          Privatumo politika
+        </a>
       </CookieConsent>
       <Footer />
     </div>
