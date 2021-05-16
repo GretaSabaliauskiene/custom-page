@@ -10,7 +10,12 @@ const StyledInput = styled.input`
     padding: 1.3rem 0.9rem;
   }
 `;
-const Input = ({ name, value, onChange, label }) => {
+
+const Error = styled.span`
+  color: red;
+  padding-top: 2rem;
+`;
+const Input = ({ name, value, onChange, error, label }) => {
   return (
     <div className="form-group pt-4">
       <label className="mb-2" htmlFor={name}>
@@ -27,6 +32,7 @@ const Input = ({ name, value, onChange, label }) => {
         minLength="1"
         maxLength="10"
       ></StyledInput>
+      {error && <Error>{error}</Error>}
     </div>
   );
 };

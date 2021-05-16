@@ -20,9 +20,12 @@ class Header extends Component {
       <header>
         <div className="container header-info">
           <div className="row ">
-            <HeaderLogo className="col-lg-4 col-md-12">
-              <img src={logo} alt="" />
-            </HeaderLogo>
+            <a href="/" className="col-lg-4 col-md-12">
+              <HeaderLogo>
+                <img src={logo} alt="" />
+              </HeaderLogo>
+            </a>
+
             <div className="col d-flex header-info__contacts justify-content-between">
               <div className="d-flex align-items-center ">
                 <a href="tel:+37037363398">

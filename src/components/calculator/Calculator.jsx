@@ -8,20 +8,21 @@ import CalculatorResultsHeading from "./CalculatorResultsHeading";
 import CalculatorResultsNumber from "./CalculatorResultsNumber";
 import Input from "./Input";
 import InfoPopup from "./InfoPopup";
+import styled from "styled-components";
+
+const Error = styled.span`
+  color: red;
+  padding-top: 2rem;
+`;
 
 class Calculator extends Component {
   schema = {
     productPrice: Joi.number().required(),
   };
 
-  validate = () => {
-    // Joi.validate(this.state.inputs, this.schema);
-    const errors = {};
+  errors = {};
 
-    if (this.state.inputs.productPrice.trim() === "")
-      errors.productPrice = "iveskite";
-    return Object.keys(errors).length === 0 ? null : errors;
-  };
+  validate = () => {};
 
   state = {
     inputs: {
@@ -41,14 +42,27 @@ class Calculator extends Component {
       pvmPagrindas: "",
       muituApmokestinamojiVerte: "",
     },
-    errors: {
-      productPrice: "Įveskite prekės   kainą",
-      // transferPriceBeforeEU: "Įveskite atgabenimo iki EU sienos kainą ",
-      // customsProcent: "Įveskite muito normą",
-      // transferPriceInEU:
-      //   "Įveskite atgabenimo nuo EU sienos iki išmuitinimo vietos kainą",
-      // otherCosts: "",
-    },
+    errors: {},
+  };
+
+  schema = {
+    productPrice: Joi.number()
+      .positive()
+      .required()
+      .max(999999999)
+      .label("Prekės kaina"),
+    transferPriceBeforeEU: Joi.number()
+      .positive()
+      .required()
+      .max(999999999)
+      .label("Atgabenimo iki ES sienos kaina"),
+    customsProcent: Joi.number().positive().required().label("Muito norma"),
+    transferPriceInEU: Joi.number()
+      .positive()
+      .required()
+      .max(999999999)
+      .label("Atgabenimo nuo ES sienos iki išmuitinimo vietos kaina"),
+    otherCosts: Joi.label("Kitos išlaidos iki išmuitinimo "),
   };
 
   componentDidMount() {
@@ -57,19 +71,35 @@ class Calculator extends Component {
     };
   }
 
-  handleChange = (e) => {
+  validate = () => {
+    const result = Joi.validate(this.state.inputs, this.schema, {
+      abortEarly: false,
+    });
+
+    if (!result.error) return null;
+
+    const errors = {};
+
+    for (let item of result.error.details) {
+      errors[item.path[0]] = item.message;
+      return errors;
+    }
+    console.log(result);
+  };
+
+  handleChange = ({ currentTarget: input }) => {
+    const errors = { ...this.state.errors };
     const inputs = { ...this.state.inputs };
 
-    inputs[e.currentTarget.name] = e.currentTarget.value;
-    this.setState({ inputs });
+    inputs[input.name] = input.value;
+    this.setState({ inputs, errors });
   };
 
   handleSubmit = (e) => {
     e.preventDefault();
 
     const errors = this.validate();
-    console.log(errors);
-    this.setState({ errors });
+    this.setState({ errors: errors || {} });
 
     if (errors) return;
 
@@ -93,7 +123,7 @@ class Calculator extends Component {
     const pvmPagrindas =
       verteSuMuitu +
       parseInt(this.state.inputs.transferPriceInEU) +
-      parseInt(this.state.inputs.otherCosts);
+      parseInt(this.state.inputs.otherCosts || 0);
 
     const pvmSuma = pvmPagrindas * (21 / 100);
     outPuts.pvmSuma = pvmSuma.toFixed(2);
@@ -112,7 +142,7 @@ class Calculator extends Component {
   };
 
   render() {
-    const { inputs } = this.state;
+    const { inputs, errors } = this.state;
     return (
       <div className="calculator container">
         <div className="card rounded-3 shadow p-3 mb-5 bg-white rounded">
@@ -128,12 +158,14 @@ class Calculator extends Component {
                 value={inputs.productPrice}
                 label="Prekės kaina*"
                 onChange={this.handleChange}
+                error={errors.productPrice}
               />
               <Input
                 name="transferPriceBeforeEU"
                 value={inputs.transferPriceBeforeEU}
                 label="Atgabenimo iki ES sienos kaina *"
                 onChange={this.handleChange}
+                error={errors.transferPriceBeforeEU}
               />
 
               <div className="form-group pt-4">
@@ -150,14 +182,15 @@ class Calculator extends Component {
                   className="form-control"
                   minLength="1"
                   maxLength="10"
-                  required
                 ></CalculatorInput>
+                {errors && <Error>{errors.customsProcent}</Error>}
               </div>
               <Input
                 name="transferPriceInEU"
                 value={inputs.transferPriceInEU}
                 label="Atgabenimo nuo ES sienos iki išmuitinimo vietos kaina *"
                 onChange={this.handleChange}
+                error={errors.transferPriceInEU}
               />
               <Input
                 name="otherCosts"
@@ -165,6 +198,7 @@ class Calculator extends Component {
                 label="Kitos išlaidos iki išmuitinimo (pvz.: muitinės tarpininko,
                   sandėliavimo, prekių patikros ir pan.)"
                 onChange={this.handleChange}
+                error={errors.otherCosts}
               />
 
               <div className="row mt-5 justify-content-center">
