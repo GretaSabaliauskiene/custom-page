@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import CurrencyFormat from "react-currency-format";
 import ArtickleH2 from "../ArtickleH2";
 import CalculatorForm from "./CalculatorForm";
 import CalculatorInput from "../calculator/CalculatorInput";
@@ -230,7 +231,11 @@ class Calculator extends Component {
                 <CalculatorResultsNumber className="col-6">
                   <span style={{ color: "#009c79" }}>
                     <span style={{ color: "black" }}>
-                      {this.state.outPuts.muitoSuma}
+                      <CurrencyFormat
+                        value={this.state.outPuts.muitoSuma}
+                        displayType={"text"}
+                        thousandSeparator={true}
+                      />
                     </span>{" "}
                     €
                   </span>
@@ -243,7 +248,11 @@ class Calculator extends Component {
                   <span style={{ color: "#009c79" }}>
                     <span style={{ color: "black" }}>
                       {" "}
-                      {this.state.outPuts.pvmSuma}
+                      <CurrencyFormat
+                        value={this.state.outPuts.pvmSuma}
+                        displayType={"text"}
+                        thousandSeparator={true}
+                      />
                     </span>
                     €
                   </span>
@@ -255,7 +264,11 @@ class Calculator extends Component {
                 <CalculatorResultsNumber className="col-6">
                   <span style={{ color: "#009c79" }}>
                     <span style={{ color: "black" }}>
-                      {this.state.outPuts.viso}
+                      <CurrencyFormat
+                        value={this.state.outPuts.viso}
+                        displayType={"text"}
+                        thousandSeparator={true}
+                      />
                     </span>{" "}
                     €
                   </span>

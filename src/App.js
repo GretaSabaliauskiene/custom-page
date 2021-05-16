@@ -1,7 +1,7 @@
 import Navigation from "./components/navigation";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-
+import CookieConsent, { Cookies } from "react-cookie-consent";
 import MuitinesTarpininkas from "./components/pages/MuitinesTarpininkas";
 import IntrastatoAtaskaitos from "./components/pages/IntrastatoAtaskaitos";
 import ApieMus from "./components/pages/ApieMus";
@@ -10,6 +10,7 @@ import PasirasytiSutarti from "./components/pages/PasirasytiSutarti";
 import Skaiciuokle from "./components/pages/Skaiciuokle";
 import SusisiekiteKontaktai from "./components/pages/SusisiekiteKontaktai";
 import Kainos from "./components/pages/Kainos";
+import PrivatumoPolitika from "./components/pages/PrivatumoPolitika";
 
 import { Route } from "react-router-dom";
 
@@ -26,7 +27,26 @@ function App() {
       <Route path="/susisiekite-kontaktai" component={SusisiekiteKontaktai} />
       <Route path="/skaiciuokle" component={Skaiciuokle} />
       <Route path="/kainos" component={Kainos} />
+      <Route path="/privatumo-politika" component={PrivatumoPolitika} />
 
+      <CookieConsent
+        location="bottom"
+        buttonText="Sutinku"
+        cookieName="myAwesomeCookieName2"
+        style={{ background: "#2B373B" }}
+        buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
+        expires={150}
+      >
+        Informuojame, kad šioje svetainėje naudojami slapukai (angl. cookies).
+        Paspaudę mygtuką „Sutinku“ arba naršydami toliau patvirtinsite savo
+        sutikimą. Bet kada galėsite atšaukti savo sutikimą pakeisdami interneto
+        naršyklės nustatymus ir ištrindami įrašytus slapukus.
+        <span style={{ fontSize: "10px" }}>
+          <a href="/privatumo-politika" className="btn btn-info">
+            Privatumo politika
+          </a>
+        </span>
+      </CookieConsent>
       <Footer />
     </div>
   );
