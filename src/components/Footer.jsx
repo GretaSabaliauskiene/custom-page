@@ -70,6 +70,7 @@ class Footer extends Component {
                 className="mr-5"
                 href="https://goo.gl/maps/FgDntTBKz2zTFn3LA"
                 target="_blank"
+                rel="noreferrer"
               >
                 <img src={location} alt="" />
               </a>
@@ -78,6 +79,7 @@ class Footer extends Component {
                   <FooterAnchor
                     href="https://goo.gl/maps/FgDntTBKz2zTFn3LA"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     Raudondvario pl. 150, 212 kab.
                   </FooterAnchor>

@@ -38,7 +38,11 @@ class Header extends Component {
                 </InfoCol>
               </div>
               <div className="d-flex align-items-center">
-                <a href="https://goo.gl/maps/FgDntTBKz2zTFn3LA" target="_blank">
+                <a
+                  href="https://goo.gl/maps/FgDntTBKz2zTFn3LA"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img src={location} alt="" />
                 </a>
                 <InfoCol>

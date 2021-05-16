@@ -160,6 +160,7 @@ class Calculator extends Component {
                 label="Prekės kaina*"
                 onChange={this.handleChange}
                 error={errors.productPrice}
+                autofocus
               />
               <Input
                 name="transferPriceBeforeEU"

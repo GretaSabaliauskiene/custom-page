@@ -3,9 +3,8 @@ import PageTitleHeading from "../PageTitleHeading";
 import PageTitleBackground from "../PageTitleBackground";
 import AccentBackground from "../AccentBackground";
 import WhiteArtickle from "../WhiteArtickle";
-import styled from "styled-components";
-import COLORS from "../Colors";
 import ArtickleH2 from "../ArtickleH2";
+
 class PrivatumoPolitika extends Component {
   state = {};
   render() {

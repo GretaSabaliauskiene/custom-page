@@ -1,7 +1,7 @@
 import Navigation from "./components/navigation";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import CookieConsent, { Cookies } from "react-cookie-consent";
+import CookieConsent from "react-cookie-consent";
 import MuitinesTarpininkas from "./components/pages/MuitinesTarpininkas";
 import IntrastatoAtaskaitos from "./components/pages/IntrastatoAtaskaitos";
 import ApieMus from "./components/pages/ApieMus";
