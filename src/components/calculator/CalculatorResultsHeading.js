@@ -7,6 +7,9 @@ const CalculatorResultsHeading = styled.h3`
   @media screen and (max-width: 990px) {
     font-size: 1.9rem;
   }
+  @media screen and (max-width: 600px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export default CalculatorResultsHeading;

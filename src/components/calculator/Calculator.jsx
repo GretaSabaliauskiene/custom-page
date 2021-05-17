@@ -60,7 +60,10 @@ class Calculator extends Component {
       .required()
       .max(999999999)
       .label("Atgabenimo nuo ES sienos iki išmuitinimo vietos kaina"),
-    otherCosts: Joi.number().allow("").label("Kitos išlaidos iki išmuitinimo"),
+    otherCosts: Joi.number()
+      .allow("")
+      .max(999999999)
+      .label("Kitos išlaidos iki išmuitinimo"),
   };
 
   componentDidMount() {
