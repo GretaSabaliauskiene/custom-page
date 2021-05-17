@@ -17,14 +17,6 @@ const Error = styled.span`
 `;
 
 class Calculator extends Component {
-  schema = {
-    productPrice: Joi.number().required(),
-  };
-
-  errors = {};
-
-  validate = () => {};
-
   state = {
     inputs: {
       productPrice: "",
@@ -45,6 +37,7 @@ class Calculator extends Component {
     },
     errors: {},
   };
+  errors = {};
 
   schema = {
     productPrice: Joi.number()
@@ -57,16 +50,21 @@ class Calculator extends Component {
       .required()
       .max(999999999)
       .label("Atgabenimo iki ES sienos kaina"),
-    customsProcent: Joi.number().positive().required().label("Muito norma"),
+    customsProcent: Joi.number()
+      .positive()
+      .required()
+      .less(100)
+      .label("Muito norma"),
     transferPriceInEU: Joi.number()
       .positive()
       .required()
       .max(999999999)
       .label("Atgabenimo nuo ES sienos iki išmuitinimo vietos kaina"),
-    otherCosts: Joi.label("Kitos išlaidos iki išmuitinimo "),
+    otherCosts: Joi.number().allow("").label("Kitos išlaidos iki išmuitinimo"),
   };
 
   componentDidMount() {
+    document.getElementById("productPrice").focus();
     document.getElementById("info-popup").onclick = function () {
       this.classList.toggle("show");
     };
@@ -161,6 +159,7 @@ class Calculator extends Component {
                 onChange={this.handleChange}
                 error={errors.productPrice}
                 autofocus
+                required
               />
               <Input
                 name="transferPriceBeforeEU"
@@ -168,13 +167,14 @@ class Calculator extends Component {
                 label="Atgabenimo iki ES sienos kaina *"
                 onChange={this.handleChange}
                 error={errors.transferPriceBeforeEU}
+                required
               />
 
               <div className="form-group pt-4">
                 <label className="mb-2" htmlFor="customsProcent">
                   Muito norma (procentais) *
                 </label>
-                <InfoPopup />
+                <InfoPopup ref={this.popup} />
                 <CalculatorInput
                   name="customsProcent"
                   onChange={this.handleChange}
@@ -184,6 +184,7 @@ class Calculator extends Component {
                   className="form-control"
                   minLength="1"
                   maxLength="10"
+                  required
                 ></CalculatorInput>
                 {errors && <Error>{errors.customsProcent}</Error>}
               </div>
@@ -193,6 +194,7 @@ class Calculator extends Component {
                 label="Atgabenimo nuo ES sienos iki išmuitinimo vietos kaina *"
                 onChange={this.handleChange}
                 error={errors.transferPriceInEU}
+                required
               />
               <Input
                 name="otherCosts"
