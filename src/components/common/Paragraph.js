@@ -9,6 +9,10 @@ const Paragraph = styled.p`
     font-size: 2rem;
     padding: 1rem;
   }
+
+  @media screen and (max-width: 600px) {
+    font-size: 1.6rem;
+  }
 `;
 
 export default Paragraph;

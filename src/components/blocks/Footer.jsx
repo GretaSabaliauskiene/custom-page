@@ -40,7 +40,7 @@ class Footer extends Component {
         <div className="container">
           <div className="row p-5" style={{ marginTop: "10rem" }}>
             <FooterSection className="col-lg-3 col-md-12 d-flex text-white">
-              <FooterAnchor className="mr-5" href="tel:+37037363398">
+              <FooterAnchor className="mr-3" href="tel:+37037363398">
                 <img src={phone} alt="" />
               </FooterAnchor>
               <div>
@@ -53,7 +53,7 @@ class Footer extends Component {
               </div>
             </FooterSection>
             <FooterSection className="col-lg-3 col-md-12  d-flex text-white">
-              <FooterAnchor className="mr-5" href="mailto:info@tarpininkai.eu">
+              <FooterAnchor className="mr-3" href="mailto:info@tarpininkai.eu">
                 <img src={email} alt="" />
               </FooterAnchor>
               <div>
@@ -67,7 +67,7 @@ class Footer extends Component {
             </FooterSection>
             <FooterSection className="col-lg-3 col-md-12  d-flex text-white">
               <a
-                className="mr-5"
+                className="mr-3"
                 href="https://goo.gl/maps/FgDntTBKz2zTFn3LA"
                 target="_blank"
                 rel="noreferrer"
@@ -89,7 +89,7 @@ class Footer extends Component {
             </FooterSection>
 
             <FooterSection className="col-lg-3 col-md-12  d-flex text-white">
-              <a className="mr-5" href="tel:+37037363398">
+              <a className="mr-3" href="tel:+37037363398">
                 <img src={watch} alt="" />
               </a>
               <div>

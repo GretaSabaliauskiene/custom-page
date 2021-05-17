@@ -23,6 +23,10 @@ const BenefitsH2 = styled.h2`
   padding-top: 3rem;
   text-align: center;
   color: ${COLORS.text};
+  @media screen and (max-width: 600px) {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
 `;
 const BenefitsH3 = styled.h3`
   font-size: 3.2rem;

@@ -15,6 +15,9 @@ const HeroHeading = styled.h1`
   @media screen and (max-width: 990px) {
     font-size: 5rem;
   }
+  @media screen and (max-width: 600px) {
+    font-size: 3.5rem;
+  }
 `;
 
 const BackgroundImage = styled.div`
