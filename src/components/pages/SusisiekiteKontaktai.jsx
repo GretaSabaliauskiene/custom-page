@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import ContactsHeading from "../contacts/ContactsHeading";
 import ContactsTitle from "../contacts/ContactsTitle";
 import ContactsContact from "../contacts/ContactsContact";
+import PageHeader from "../common/PageHeading";
 import cogwheel from "../../images/svg/cogwheel.svg";
 import map from "../../images/svg/locationCont.svg";
 import pen from "../../images/svg/pen-and-paper.svg";
 import phone from "../../images/svg/phone2.svg";
-import PageHeader from "../common/PageHeading";
 
 class SusisiekiteKontaktai extends Component {
   state = {};

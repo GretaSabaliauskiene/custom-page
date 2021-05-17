@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import COLORS from "../Colors";
-import email from "../../images/svg/e-mail.svg";
 import StyledDiv from "../common/StyledDiv";
+import SmallHeading from "../common/SmallHeading";
+import email from "../../images/svg/e-mail.svg";
 import phone from "../../images/svg/phone.svg";
 import location from "../../images/svg/location.svg";
 import styled from "styled-components";
 import watch from "../../images/svg/wh.svg";
-import SmallHeading from "../common/SmallHeading";
 
 const FooterSpan = styled.span`
   color: ${COLORS.muted};

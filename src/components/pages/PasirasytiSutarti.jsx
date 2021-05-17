@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import ArtickleH2 from "../common/ArtickleH2";
 import WhiteArtickle from "../common/WhiteArtickle";
 import PageHeader from "../common/PageHeading";

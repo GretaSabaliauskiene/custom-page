@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import PageTitleBackground from "./PageTitleBackground";
+import COLORS from "../Colors";
 
 const PageTitleHeading = styled.h1`
   color: white;
@@ -12,7 +13,7 @@ const PageTitleHeading = styled.h1`
 `;
 
 const AccentBackground = styled.div`
-  background-color: rgba(0, 148, 119, 0.5);
+  background-color: ${COLORS.accentBackground};
 `;
 
 const PageHeader = ({ label }) => {

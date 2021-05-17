@@ -1,16 +1,16 @@
 import React, { Component } from "react";
+import styled from "styled-components";
 import WhiteArtickle from "../common/WhiteArtickle";
 import MutedArtickle from "../common/MutedArtickle";
 import ArtickleH2 from "../common/ArtickleH2";
 import Avatar from "../avatar/Avatar";
-import Algimantas from "../../images/algimantas.jpg";
-import Antanas from "../../images/antanas-300x290.jpg";
-import Ruta from "../../images/ruta.jpg";
 import AvatarTitle from "../avatar/AvatarTitle";
 import AvatarHeading from "../../components/avatar/AvatarHeading";
 import AvatarContacts from "../avatar/AvatarContacts";
-import styled from "styled-components";
 import PageHeader from "../common/PageHeading";
+import Algimantas from "../../images/algimantas.jpg";
+import Antanas from "../../images/antanas-300x290.jpg";
+import Ruta from "../../images/ruta.jpg";
 
 const AvatarHolder = styled.div`
   @media screen and (max-width: 1199px) {

@@ -5,7 +5,7 @@ import ArtickleH2 from "../common/ArtickleH2";
 import MuitinesTarpininkasImage from "../../images/muitines-tarpininkas-300x200.png";
 import ArtickleImage from "../common/ArtickleImage";
 import TirCarnetImage from "../../images/tir-carnet-300x200.png";
-import PricePageLink from "../PricePageLink";
+import PricePageLink from "../common/PricePageLink";
 import PageHeader from "../common/PageHeading";
 
 class MuitinesTarpininkas extends Component {

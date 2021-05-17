@@ -4,7 +4,7 @@ import ArtickleH2 from "../common/ArtickleH2";
 import IntrastatoAtaskaitosImage from "../../images/intrastato-ataskaitos-300x200.png";
 import ArtickleImage from "../common/ArtickleImage";
 import WhiteArtickle from "../common/WhiteArtickle";
-import PricePageLink from "../PricePageLink";
+import PricePageLink from "../common/PricePageLink";
 import PageHeader from "../common/PageHeading";
 
 class IntrastatoAtaskaitos extends Component {

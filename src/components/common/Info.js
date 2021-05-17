@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import COLORS from "../Colors";
 
 const InfoCol = styled.div`
   margin-left: 1rem;
-  color: rgb(135, 135, 141);
+  color: ${COLORS.muted};
 `;
 
 export default InfoCol;

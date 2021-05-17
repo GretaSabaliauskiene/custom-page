@@ -1,6 +1,6 @@
-import styled from "styled-components";
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import styled from "styled-components";
 import heroImage from "../../images/muitines-tarpininkas.jpg";
 import Button from "../common/Button";
 import Paragraph from "../../components/common/Paragraph";

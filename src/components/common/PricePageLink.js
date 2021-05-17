@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import COLORS from "./Colors";
+import COLORS from "../Colors";
 
 const PricePageLink = styled.a`
   text-decoration: none;

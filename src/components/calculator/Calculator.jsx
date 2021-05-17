@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import CurrencyFormat from "react-currency-format";
+import Joi from "joi-browser";
+import styled from "styled-components";
 import ArtickleH2 from "../common/ArtickleH2";
 import CalculatorForm from "./CalculatorForm";
 import CalculatorInput from "../calculator/CalculatorInput";
 import CalculatorButton from "./CalculatorButton";
-import Joi from "joi-browser";
 import CalculatorResultsHeading from "./CalculatorResultsHeading";
 import CalculatorResultsNumber from "./CalculatorResultsNumber";
 import Input from "./Input";
 import InfoPopup from "./InfoPopup";
-import styled from "styled-components";
 
 const Error = styled.span`
   color: red;

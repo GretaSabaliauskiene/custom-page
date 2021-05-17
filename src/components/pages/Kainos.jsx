@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import WhiteArtickle from "../common/WhiteArtickle";
 import styled from "styled-components";
-import COLORS from "../Colors";
+import WhiteArtickle from "../common/WhiteArtickle";
 import PageHeader from "../common/PageHeading";
+import COLORS from "../Colors";
 
 const PriceTableHeading = styled.thead`
   background: #f3f4f6 !important;

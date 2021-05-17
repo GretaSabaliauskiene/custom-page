@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import COLORS from "../Colors";
 
 const Accent = styled.div`
-  background-color: rgba(0, 148, 119, 0.5);
+  background-color: r ${COLORS.accentBackground};
 `;
 
 export default Accent;
