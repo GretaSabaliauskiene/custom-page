@@ -243,7 +243,6 @@ class Calculator extends Component {
                     €
                   </span>
                 </CalculatorResultsNumber>
-
                 <div className="col-5 border-bottom">
                   <CalculatorResultsHeading>PVM suma:</CalculatorResultsHeading>
                 </div>
@@ -260,7 +259,6 @@ class Calculator extends Component {
                     €
                   </span>
                 </CalculatorResultsNumber>
-
                 <div className="col-5 border-bottom">
                   <CalculatorResultsHeading>Viso:</CalculatorResultsHeading>
                 </div>

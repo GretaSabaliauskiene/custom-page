@@ -4,6 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import heroImage from "../../images/muitines-tarpininkas.jpg";
 import Button from "../common/Button";
 import Paragraph from "../../components/common/Paragraph";
+import small from "../../images/muitines-tarpininkas.700.jpg";
+import medium from "../../images/muitines-tarpininkas.medium.jpg";
 
 const HeroHeading = styled.h1`
   color: white;
@@ -12,6 +14,20 @@ const HeroHeading = styled.h1`
   letter-spacing: 0.1rem;
   @media screen and (max-width: 990px) {
     font-size: 5rem;
+  }
+`;
+
+const BackgroundImage = styled.div`
+  background-image: url(${heroImage});
+
+  @media screen and (max-width: 600px) {
+    background-image: url(${small});
+  }
+  @media screen and (min-width: 600px) {
+    background-image: url(${medium});
+  }
+  @media screen and (min-width: 991px) {
+    background-image: url(${heroImage});
   }
 `;
 
@@ -27,7 +43,7 @@ const HeroContainer = styled.div`
 class Hero extends Component {
   render() {
     return (
-      <div style={{ backgroundImage: `url(${heroImage})` }}>
+      <BackgroundImage>
         <div className="container">
           <HeroContainer>
             <div className="animate__animated animate__fadeInUp">
@@ -47,7 +63,7 @@ class Hero extends Component {
             </div>
           </HeroContainer>
         </div>
-      </div>
+      </BackgroundImage>
     );
   }
 }
