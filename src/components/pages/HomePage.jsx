@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Hero from "../Hero";
-import Benefits from "../Benefits";
+import Hero from "../blocks/Hero";
+import Benefits from "../blocks/Benefits";
 
 class HomePage extends Component {
   state = {};

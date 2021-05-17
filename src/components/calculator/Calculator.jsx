@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import CurrencyFormat from "react-currency-format";
-import ArtickleH2 from "../ArtickleH2";
+import ArtickleH2 from "../common/ArtickleH2";
 import CalculatorForm from "./CalculatorForm";
 import CalculatorInput from "../calculator/CalculatorInput";
 import CalculatorButton from "./CalculatorButton";

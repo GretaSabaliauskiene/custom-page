@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import COLORS from "../components/Colors";
-import medal from "../images/svg/medal.svg";
-import professional from "../images/svg/scientist.svg";
-import cogwheel from "../images/svg/cogwheel.svg";
+import COLORS from "../../components/Colors";
+import medal from "../../images/svg/medal.svg";
+import professional from "../../images/svg/scientist.svg";
+import cogwheel from "../../images/svg/cogwheel.svg";
 
 import styled from "styled-components";
 

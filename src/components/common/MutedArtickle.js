@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import COLORS from "./Colors";
+import COLORS from "../Colors";
 
 const MutedArtickle = styled.article`
   background-color: ${COLORS.mutedArtickle};

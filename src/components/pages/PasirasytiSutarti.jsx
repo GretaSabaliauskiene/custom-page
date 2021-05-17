@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import PageTitleHeading from "../PageTitleHeading";
-import PageTitleBackground from "../PageTitleBackground";
-import AccentBackground from "../AccentBackground";
-import ArtickleH2 from "../ArtickleH2";
-import WhiteArtickle from "../WhiteArtickle";
+import PageTitleHeading from "../common/PageTitleHeading";
+import PageTitleBackground from "../common/PageTitleBackground";
+import AccentBackground from "../common/AccentBackground";
+import ArtickleH2 from "../common/ArtickleH2";
+import WhiteArtickle from "../common/WhiteArtickle";
 
 class PasirasytiSutarti extends Component {
   state = {};

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import PageTitleHeading from "../PageTitleHeading";
-import PageTitleBackground from "../PageTitleBackground";
-import AccentBackground from "../AccentBackground";
-import WhiteArtickle from "../WhiteArtickle";
+import PageTitleHeading from "../common/PageTitleHeading";
+import PageTitleBackground from "../common/PageTitleBackground";
+import AccentBackground from "../common/AccentBackground";
+import WhiteArtickle from "../common/WhiteArtickle";
 import styled from "styled-components";
 import COLORS from "../Colors";
 

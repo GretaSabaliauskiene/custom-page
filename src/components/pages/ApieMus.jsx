@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import PageTitleHeading from "../PageTitleHeading";
-import PageTitleBackground from "../PageTitleBackground";
-import AccentBackground from "../AccentBackground";
-import WhiteArtickle from "../WhiteArtickle";
-import MutedArtickle from "../MutedArtickle";
-import ArtickleH2 from "../ArtickleH2";
+import PageTitleHeading from "../common/PageTitleHeading";
+import PageTitleBackground from "../common/PageTitleBackground";
+import AccentBackground from "../common/AccentBackground";
+import WhiteArtickle from "../common/WhiteArtickle";
+import MutedArtickle from "../common/MutedArtickle";
+import ArtickleH2 from "../common/ArtickleH2";
 import Avatar from "../avatar/Avatar";
 import Algimantas from "../../images/algimantas.jpg";
 import Antanas from "../../images/antanas-300x290.jpg";

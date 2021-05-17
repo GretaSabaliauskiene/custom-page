@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import heroImage from "../images/muitines-tarpininkas.jpg";
-import Button from "../components/Button";
-import Paragraph from "../components/Paragraph";
+import heroImage from "../../images/muitines-tarpininkas.jpg";
+import Button from "../common/Button";
+import Paragraph from "../../components/common/Paragraph";
 
 const HeroHeading = styled.h1`
   color: white;

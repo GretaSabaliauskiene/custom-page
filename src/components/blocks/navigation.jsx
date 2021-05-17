@@ -4,12 +4,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Navbar from "react-bootstrap/Navbar";
-import StyledDive from "./StyledDiv";
+import StyledDiv from "../common/StyledDiv";
 
 class Navigation extends Component {
   render() {
     return (
-      <StyledDive>
+      <StyledDiv>
         <div className="container">
           <Navbar collapseOnSelect expand="lg" className="p-4" variant="dark">
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -37,7 +37,7 @@ class Navigation extends Component {
             </Navbar.Collapse>
           </Navbar>
         </div>
-      </StyledDive>
+      </StyledDiv>
     );
   }
 }

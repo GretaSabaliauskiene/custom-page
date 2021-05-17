@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import PageTitleHeading from "../PageTitleHeading";
-import PageTitleBackground from "../PageTitleBackground";
-import AccentBackground from "../AccentBackground";
-import MutedArtickle from "../MutedArtickle";
-import ArtickleH2 from "../ArtickleH2";
+import PageTitleHeading from "../common/PageTitleHeading";
+import PageTitleBackground from "../common/PageTitleBackground";
+import AccentBackground from "../common/AccentBackground";
+import MutedArtickle from "../common/MutedArtickle";
+import ArtickleH2 from "../common/ArtickleH2";
 import IntrastatoAtaskaitosImage from "../../images/intrastato-ataskaitos-300x200.png";
-import ArtickleImage from "../ArtickleImage";
-import WhiteArtickle from "../WhiteArtickle";
+import ArtickleImage from "../common/ArtickleImage";
+import WhiteArtickle from "../common/WhiteArtickle";
 import PricePageLink from "../PricePageLink";
 
 class IntrastatoAtaskaitos extends Component {

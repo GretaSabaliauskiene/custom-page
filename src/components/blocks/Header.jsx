@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import logo from "../images/logo.png";
-import phone from "../images/svg/phone.svg";
-import location from "../images/svg/location.svg";
-import watch from "../images/svg/wh.svg";
-import InfoCol from "../components/Info";
+import logo from "../../images/logo.png";
+import phone from "../../images/svg/phone.svg";
+import location from "../../images/svg/location.svg";
+import watch from "../../images/svg/wh.svg";
+import InfoCol from "../common/Info";
 import styled from "styled-components";
-import HeaderHeading from "../components/HeaderHeading";
+import HeaderHeading from "../../components/common/HeaderHeading";
 
 const HeaderLogo = styled.div`
   @media screen and (max-width: 990px) {

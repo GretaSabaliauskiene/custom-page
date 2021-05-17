@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import PageTitleHeading from "../PageTitleHeading";
-import PageTitleBackground from "../PageTitleBackground";
-import AccentBackground from "../AccentBackground";
+import PageTitleHeading from "../common/PageTitleHeading";
+import PageTitleBackground from "../common/PageTitleBackground";
+import AccentBackground from "../common/AccentBackground";
 import ContactsHeading from "../contacts/ContactsHeading";
 import ContactsTitle from "../contacts/ContactsTitle";
 import ContactsContact from "../contacts/ContactsContact";

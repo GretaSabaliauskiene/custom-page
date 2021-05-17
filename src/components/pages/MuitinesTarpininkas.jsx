@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import PageTitleHeading from "../PageTitleHeading";
-import PageTitleBackground from "../PageTitleBackground";
-import AccentBackground from "../AccentBackground";
-import WhiteArtickle from "../WhiteArtickle";
-import MutedArtickle from "../MutedArtickle";
-import ArtickleH2 from "../ArtickleH2";
+import PageTitleHeading from "../common/PageTitleHeading";
+import PageTitleBackground from "../common/PageTitleBackground";
+import AccentBackground from "../common/AccentBackground";
+import WhiteArtickle from "../common/WhiteArtickle";
+import MutedArtickle from "../common/MutedArtickle";
+import ArtickleH2 from "../common/ArtickleH2";
 import MuitinesTarpininkasImage from "../../images/muitines-tarpininkas-300x200.png";
-import ArtickleImage from "../ArtickleImage";
+import ArtickleImage from "../common/ArtickleImage";
 import TirCarnetImage from "../../images/tir-carnet-300x200.png";
 import PricePageLink from "../PricePageLink";
 
