@@ -1,19 +1,13 @@
 import React, { Component } from "react";
-import PageTitleHeading from "../common/PageTitleHeading";
-import PageTitleBackground from "../common/PageTitleBackground";
-import AccentBackground from "../common/AccentBackground";
 import Calculator from "../calculator/Calculator";
+import PageHeader from "../common/PageHeading";
 
 class Skaiciuokle extends Component {
   state = {};
   render() {
     return (
       <React.Fragment>
-        <PageTitleBackground>
-          <AccentBackground>
-            <PageTitleHeading>Importo mokesčių skaičiuoklė</PageTitleHeading>
-          </AccentBackground>
-        </PageTitleBackground>
+        <PageHeader label="Importo mokesčių skaičiuoklė" />
         <Calculator />
       </React.Fragment>
     );

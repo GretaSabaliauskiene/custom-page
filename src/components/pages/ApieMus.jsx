@@ -1,7 +1,4 @@
 import React, { Component } from "react";
-import PageTitleHeading from "../common/PageTitleHeading";
-import PageTitleBackground from "../common/PageTitleBackground";
-import AccentBackground from "../common/AccentBackground";
 import WhiteArtickle from "../common/WhiteArtickle";
 import MutedArtickle from "../common/MutedArtickle";
 import ArtickleH2 from "../common/ArtickleH2";
@@ -13,6 +10,7 @@ import AvatarTitle from "../avatar/AvatarTitle";
 import AvatarHeading from "../../components/avatar/AvatarHeading";
 import AvatarContacts from "../avatar/AvatarContacts";
 import styled from "styled-components";
+import PageHeader from "../common/PageHeading";
 
 const AvatarHolder = styled.div`
   @media screen and (max-width: 1199px) {
@@ -25,11 +23,7 @@ class ApieMus extends Component {
   render() {
     return (
       <React.Fragment>
-        <PageTitleBackground>
-          <AccentBackground>
-            <PageTitleHeading>Apie mus</PageTitleHeading>
-          </AccentBackground>
-        </PageTitleBackground>
+        <PageHeader label="Apie mus" />
         <WhiteArtickle>
           <div className="container">
             <p className="mb-5">

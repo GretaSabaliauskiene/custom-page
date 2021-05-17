@@ -1,20 +1,14 @@
 import React, { Component } from "react";
-import PageTitleHeading from "../common/PageTitleHeading";
-import PageTitleBackground from "../common/PageTitleBackground";
-import AccentBackground from "../common/AccentBackground";
 import ArtickleH2 from "../common/ArtickleH2";
 import WhiteArtickle from "../common/WhiteArtickle";
+import PageHeader from "../common/PageHeading";
 
 class PasirasytiSutarti extends Component {
   state = {};
   render() {
     return (
       <React.Fragment>
-        <PageTitleBackground>
-          <AccentBackground>
-            <PageTitleHeading>Pasirašyti sutartį</PageTitleHeading>
-          </AccentBackground>
-        </PageTitleBackground>
+        <PageHeader label="Pasirašyti sutartį" />
         <div className="container">
           <div className="row">
             <div className="col text-center">

@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import PageTitleHeading from "../common/PageTitleHeading";
-import PageTitleBackground from "../common/PageTitleBackground";
-import AccentBackground from "../common/AccentBackground";
 import WhiteArtickle from "../common/WhiteArtickle";
 import styled from "styled-components";
 import COLORS from "../Colors";
+import PageHeader from "../common/PageHeading";
 
 const PriceTableHeading = styled.thead`
   background: #f3f4f6 !important;
@@ -20,11 +18,7 @@ class Kainos extends Component {
   render() {
     return (
       <React.Fragment>
-        <PageTitleBackground>
-          <AccentBackground>
-            <PageTitleHeading>Kainos</PageTitleHeading>
-          </AccentBackground>
-        </PageTitleBackground>
+        <PageHeader label="Kainos" />
         <WhiteArtickle>
           <div className="container">
             <p mb-5>

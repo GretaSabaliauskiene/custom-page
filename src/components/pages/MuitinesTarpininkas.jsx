@@ -1,7 +1,4 @@
 import React, { Component } from "react";
-import PageTitleHeading from "../common/PageTitleHeading";
-import PageTitleBackground from "../common/PageTitleBackground";
-import AccentBackground from "../common/AccentBackground";
 import WhiteArtickle from "../common/WhiteArtickle";
 import MutedArtickle from "../common/MutedArtickle";
 import ArtickleH2 from "../common/ArtickleH2";
@@ -9,17 +6,14 @@ import MuitinesTarpininkasImage from "../../images/muitines-tarpininkas-300x200.
 import ArtickleImage from "../common/ArtickleImage";
 import TirCarnetImage from "../../images/tir-carnet-300x200.png";
 import PricePageLink from "../PricePageLink";
+import PageHeader from "../common/PageHeading";
 
 class MuitinesTarpininkas extends Component {
   state = {};
   render() {
     return (
       <React.Fragment>
-        <PageTitleBackground>
-          <AccentBackground>
-            <PageTitleHeading>Muitinės tarpininkai</PageTitleHeading>
-          </AccentBackground>
-        </PageTitleBackground>
+        <PageHeader label="Muitinės tarpininkai" />
         <WhiteArtickle>
           <div className="container">
             <p className="mb-5">

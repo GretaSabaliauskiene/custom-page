@@ -1,7 +1,4 @@
 import React, { Component } from "react";
-import PageTitleHeading from "../common/PageTitleHeading";
-import PageTitleBackground from "../common/PageTitleBackground";
-import AccentBackground from "../common/AccentBackground";
 import ContactsHeading from "../contacts/ContactsHeading";
 import ContactsTitle from "../contacts/ContactsTitle";
 import ContactsContact from "../contacts/ContactsContact";
@@ -9,19 +6,14 @@ import cogwheel from "../../images/svg/cogwheel.svg";
 import map from "../../images/svg/locationCont.svg";
 import pen from "../../images/svg/pen-and-paper.svg";
 import phone from "../../images/svg/phone2.svg";
+import PageHeader from "../common/PageHeading";
 
 class SusisiekiteKontaktai extends Component {
   state = {};
   render() {
     return (
       <React.Fragment>
-        <PageTitleBackground>
-          <AccentBackground>
-            <PageTitleHeading style={{ marginBottom: "0" }}>
-              Kontaktai
-            </PageTitleHeading>
-          </AccentBackground>
-        </PageTitleBackground>
+        <PageHeader label="Kontaktai" />
         <article>
           <div className="container">
             <ContactsHeading>Kontaktinė informacija</ContactsHeading>

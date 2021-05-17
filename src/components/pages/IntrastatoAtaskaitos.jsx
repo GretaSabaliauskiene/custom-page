@@ -1,23 +1,17 @@
 import React, { Component } from "react";
-import PageTitleHeading from "../common/PageTitleHeading";
-import PageTitleBackground from "../common/PageTitleBackground";
-import AccentBackground from "../common/AccentBackground";
 import MutedArtickle from "../common/MutedArtickle";
 import ArtickleH2 from "../common/ArtickleH2";
 import IntrastatoAtaskaitosImage from "../../images/intrastato-ataskaitos-300x200.png";
 import ArtickleImage from "../common/ArtickleImage";
 import WhiteArtickle from "../common/WhiteArtickle";
 import PricePageLink from "../PricePageLink";
+import PageHeader from "../common/PageHeading";
 
 class IntrastatoAtaskaitos extends Component {
   render() {
     return (
       <React.Fragment>
-        <PageTitleBackground>
-          <AccentBackground>
-            <PageTitleHeading>Intrastato ataskaitos</PageTitleHeading>
-          </AccentBackground>
-        </PageTitleBackground>
+        <PageHeader label="Intrastato ataskaitos" />
         <div className="container">
           <WhiteArtickle>
             <p className=" mb-5">
