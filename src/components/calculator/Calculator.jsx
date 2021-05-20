@@ -47,17 +47,17 @@ class Calculator extends Component {
       .label("Prekės kaina"),
     transferPriceBeforeEU: Joi.number()
       .positive()
-      .required()
+      .allow("")
       .max(999999999)
       .label("Atgabenimo iki ES sienos kaina"),
     customsProcent: Joi.number()
       .positive()
-      .required()
+      .allow("")
       .less(100)
       .label("Muito norma"),
     transferPriceInEU: Joi.number()
       .positive()
-      .required()
+      .allow("")
       .max(999999999)
       .label("Atgabenimo nuo ES sienos iki išmuitinimo vietos kaina"),
     otherCosts: Joi.number()
@@ -109,23 +109,26 @@ class Calculator extends Component {
 
     const outPuts = { ...this.state.outPuts };
 
-    const muitoSuma =
-      (parseInt(this.state.inputs.productPrice) +
-        parseInt(this.state.inputs.transferPriceBeforeEU)) *
-      (this.state.inputs.customsProcent / 100);
-
-    outPuts.muitoSuma = Number(muitoSuma.toFixed(2));
+    const { inputs } = this.state;
 
     const muituApmokestinamojiVerte =
-      parseInt(this.state.inputs.productPrice) +
-      parseInt(this.state.inputs.transferPriceBeforeEU);
+      parseInt(inputs.productPrice) +
+      parseInt(inputs.transferPriceBeforeEU || 0);
+
+    let muitoSuma = 0;
+
+    if (inputs.customsProcent) {
+      muitoSuma = muituApmokestinamojiVerte * (inputs.customsProcent / 100);
+    }
+
+    outPuts.muitoSuma = Number(muitoSuma.toFixed(2));
 
     const verteSuMuitu = muituApmokestinamojiVerte + muitoSuma;
 
     const pvmPagrindas =
       verteSuMuitu +
-      parseInt(this.state.inputs.transferPriceInEU) +
-      parseInt(this.state.inputs.otherCosts || 0);
+      parseInt(inputs.transferPriceInEU || 0) +
+      parseInt(inputs.otherCosts || 0);
 
     const pvmSuma = pvmPagrindas * (21 / 100);
     outPuts.pvmSuma = pvmSuma.toFixed(2);
@@ -167,15 +170,14 @@ class Calculator extends Component {
               <Input
                 name="transferPriceBeforeEU"
                 value={inputs.transferPriceBeforeEU}
-                label="Atgabenimo iki ES sienos kaina *"
+                label="Atgabenimo iki ES sienos kaina "
                 onChange={this.handleChange}
                 error={errors.transferPriceBeforeEU}
-                required
               />
 
               <div className="form-group pt-4">
                 <label className="mb-2" htmlFor="customsProcent">
-                  Muito norma (procentais) *
+                  Muito norma (procentais)
                 </label>
                 <InfoPopup ref={this.popup} />
                 <CalculatorInput
@@ -187,17 +189,15 @@ class Calculator extends Component {
                   className="form-control"
                   minLength="1"
                   maxLength="10"
-                  required
                 ></CalculatorInput>
                 {errors && <Error>{errors.customsProcent}</Error>}
               </div>
               <Input
                 name="transferPriceInEU"
                 value={inputs.transferPriceInEU}
-                label="Atgabenimo nuo ES sienos iki išmuitinimo vietos kaina *"
+                label="Atgabenimo nuo ES sienos iki išmuitinimo vietos kaina "
                 onChange={this.handleChange}
                 error={errors.transferPriceInEU}
-                required
               />
               <Input
                 name="otherCosts"
