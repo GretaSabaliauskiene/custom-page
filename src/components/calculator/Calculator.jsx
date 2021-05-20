@@ -24,6 +24,7 @@ class Calculator extends Component {
       customsProcent: "",
       transferPriceInEU: "",
       otherCosts: "",
+      pvmTarrif: 21,
     },
     outPuts: {
       muitoSuma: "",
@@ -53,7 +54,7 @@ class Calculator extends Component {
     customsProcent: Joi.number()
       .positive()
       .allow("")
-      .less(100)
+      .less(101)
       .label("Muito norma"),
     transferPriceInEU: Joi.number()
       .positive()
@@ -64,6 +65,11 @@ class Calculator extends Component {
       .allow("")
       .max(999999999)
       .label("Kitos išlaidos iki išmuitinimo"),
+    pvmTarrif: Joi.number()
+      .allow("", 0)
+      .max(999999999)
+      .less(101)
+      .label("PVM tarifas"),
   };
 
   componentDidMount() {
@@ -130,7 +136,7 @@ class Calculator extends Component {
       parseInt(inputs.transferPriceInEU || 0) +
       parseInt(inputs.otherCosts || 0);
 
-    const pvmSuma = pvmPagrindas * (21 / 100);
+    const pvmSuma = pvmPagrindas * (inputs.pvmTarrif / 100);
     outPuts.pvmSuma = pvmSuma.toFixed(2);
 
     const viso = pvmSuma + muitoSuma;
@@ -206,6 +212,13 @@ class Calculator extends Component {
                   sandėliavimo, prekių patikros ir pan.)"
                 onChange={this.handleChange}
                 error={errors.otherCosts}
+              />
+              <Input
+                name="pvmTarrif"
+                value={inputs.pvmTarrif}
+                label="PVM tarifas (procentais)"
+                onChange={this.handleChange}
+                error={errors.pvmTarrif}
               />
 
               <div className="row mt-5 justify-content-center">
