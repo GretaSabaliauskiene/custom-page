@@ -47,26 +47,29 @@ class Calculator extends Component {
       .max(999999999)
       .label("Prekės kaina"),
     transferPriceBeforeEU: Joi.number()
-      .positive()
+      .min(0)
       .allow("")
       .max(999999999)
       .label("Atgabenimo iki ES sienos kaina"),
     customsProcent: Joi.number()
-      .positive()
+      .min(0)
       .allow("")
       .less(101)
       .label("Muito norma"),
     transferPriceInEU: Joi.number()
-      .positive()
+      .min(0)
       .allow("")
       .max(999999999)
       .label("Atgabenimo nuo ES sienos iki išmuitinimo vietos kaina"),
     otherCosts: Joi.number()
       .allow("")
       .max(999999999)
+      .min(0)
       .label("Kitos išlaidos iki išmuitinimo"),
     pvmTarrif: Joi.number()
-      .allow("", 0)
+      .allow("")
+      .min(1)
+
       .max(999999999)
       .less(101)
       .label("PVM tarifas"),
@@ -92,7 +95,6 @@ class Calculator extends Component {
       errors[item.path[0]] = item.message;
       return errors;
     }
-    console.log(result);
   };
 
   handleChange = ({ currentTarget: input }) => {
@@ -101,6 +103,10 @@ class Calculator extends Component {
 
     inputs[input.name] = input.value;
     this.setState({ inputs, errors });
+
+    const result = Joi.validate(this.state.inputs, this.schema, {
+      abortEarly: false,
+    });
   };
 
   handleSubmit = (e) => {
@@ -111,6 +117,10 @@ class Calculator extends Component {
 
     if (errors) return;
 
+    this.handleCalculations();
+  };
+
+  handleCalculations() {
     const hiddenCalculations = { ...this.state.hiddenCalculations };
 
     const outPuts = { ...this.state.outPuts };
@@ -150,7 +160,7 @@ class Calculator extends Component {
     this.setState({ outPuts });
 
     this.setState({ hiddenCalculations });
-  };
+  }
 
   render() {
     const { inputs, errors } = this.state;
